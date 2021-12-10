@@ -1,9 +1,9 @@
 const defaultConfig = {
   width: '150%',
   height: '150%',
-  x: 0,
+  x: 2,
   y: 2,
-  blurRadius: 1,
+  blurRadius: 0.5,
 }
 
 module.exports = function defineBoxShadow(svg, id, config = {}) {

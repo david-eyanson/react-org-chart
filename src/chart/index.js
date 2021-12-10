@@ -10,6 +10,8 @@ module.exports = {
 }
 
 function init(options) {
+  console.log('OPTIONS')
+  console.log(options)
   // Merge options with the default config
   const config = {
     ...defaultConfig,
@@ -151,10 +153,10 @@ function init(options) {
     return d3
       .transition()
       .duration(350)
-      .tween('zoom', function() {
+      .tween('zoom', function () {
         var iTranslate = d3.interpolate(zoom.translate(), translate),
           iScale = d3.interpolate(zoom.scale(), scale)
-        return function(t) {
+        return function (t) {
           zoom.scale(iScale(t)).translate(iTranslate(t))
           zoomed()
         }

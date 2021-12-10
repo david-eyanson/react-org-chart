@@ -4,9 +4,10 @@ export const tree = {
   id: 100,
   person: {
     id: 100,
+    height: 150,
     avatar: avatarPersonnel,
     department: '',
-    name: 'Henry monger',
+    name: 'Eric Lowry',
     title: 'Manager',
     totalReports: 3,
   },
@@ -20,9 +21,11 @@ export const tree1 = [
     id: 36,
     person: {
       id: 36,
+      height: 100,
       avatar: avatarPersonnel,
       department: '',
-      name: 'Tomasz polaski',
+      name:
+        'Tomasz polaski. I love long sentences that are really long and do not make senses, especially if they have repeating content.  I love long sentences that are really long and do not make senses, especially if they have repeating content.  I love long sentences that are really long and do not make senses, especially if they have repeating content.  I love long sentences that are really long and do not make senses, especially if they have repeating content.  I love long sentences that are really long and do not make senses, especially if they have repeating content.  I love long sentences that are really long and do not make senses, especially if they have repeating content.  I love long sentences that are really long and do not make senses, especially if they have repeating content.  I love long sentences that are really long and do not make senses, especially if they have repeating content.  I love long sentences that are really long and do not make senses, especially if they have repeating content.  I love long sentences that are really long and do not make senses, especially if they have repeating content.  I love long sentences that are really long and do not make senses, especially if they have repeating content.  I love long sentences that are really long and do not make senses, especially if they have repeating content.  I love long sentences that are really long and do not make senses, especially if they have repeating content.  I love long sentences that are really long and do not make senses, especially if they have repeating content.  I love long sentences that are really long and do not make senses, especially if they have repeating content.  I love long sentences that are really long and do not make senses, especially if they have repeating content.  I love long sentences that are really long and do not make senses, especially if they have repeating content.  I love long sentences that are really long and do not make senses, especially if they have repeating content.  I love long sentences that are really long and do not make senses, especially if they have repeating content.  I love long sentences that are really long and do not make senses, especially if they have repeating content. ',
       title: 'IT Specialist',
       totalReports: 4,
     },
@@ -34,9 +37,10 @@ export const tree1 = [
     id: 32,
     person: {
       id: 32,
+      height: 160,
       avatar: avatarPersonnel,
       department: '',
-      name: 'Emanuel walker',
+      name: 'David Eyanson',
       title: 'IT Specialist',
       totalReports: 0,
     },
@@ -48,9 +52,10 @@ export const tree1 = [
     id: 25,
     person: {
       id: 25,
+      height: 200,
       avatar: avatarPersonnel,
       department: '',
-      name: 'Kerry peter',
+      name: 'Casey Hoang',
       title: 'IT Specialist',
       totalReports: 3,
     },
@@ -65,6 +70,7 @@ export const tree2 = [
     id: 56,
     person: {
       id: 56,
+      height: 250,
       avatar: avatarPersonnel,
       department: '',
       name: 'Sam John',
@@ -80,6 +86,7 @@ export const tree2 = [
     id: 66,
     person: {
       id: 66,
+      height: 175,
       avatar: avatarPersonnel,
       department: '',
       name: 'John doe',
@@ -95,6 +102,7 @@ export const tree2 = [
     id: 76,
     person: {
       id: 76,
+      height: 150,
       avatar: avatarPersonnel,
       department: '',
       name: 'Emilia rogers',
@@ -110,6 +118,7 @@ export const tree2 = [
     id: 60,
     person: {
       id: 60,
+      height: 200,
       avatar: avatarPersonnel,
       department: '',
       name: 'Ellen cott',
@@ -127,6 +136,7 @@ export const tree3 = [
     id: 70,
     person: {
       id: 70,
+      height: 160,
       avatar: avatarPersonnel,
       department: '',
       name: 'Kenneth dom',
@@ -141,6 +151,7 @@ export const tree3 = [
     id: 45,
     person: {
       id: 45,
+      height: 180,
       avatar: avatarPersonnel,
       department: '',
       name: 'Kin baker',
@@ -158,6 +169,7 @@ export const tree4 = [
     id: 102,
     person: {
       id: 102,
+      height: 180,
       avatar: avatarPersonnel,
       department: '',
       name: 'Hendy kinger',
@@ -172,6 +184,7 @@ export const tree4 = [
     id: 455,
     person: {
       id: 455,
+      height: 180,
       avatar: avatarPersonnel,
       department: '',
       name: 'Kate baker',
@@ -186,6 +199,7 @@ export const tree4 = [
     id: 444,
     person: {
       id: 444,
+      height: 180,
       avatar: avatarPersonnel,
       department: '',
       name: 'John medis',
@@ -201,6 +215,7 @@ export const tree4 = [
     id: 456,
     person: {
       id: 456,
+      height: 180,
       avatar: avatarPersonnel,
       department: '',
       name: 'Brett lee',

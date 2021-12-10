@@ -2,8 +2,9 @@ import React from 'react'
 import './App.css'
 import OrgChart from '@unicef/react-org-chart'
 import { BrowserRouter, Route } from 'react-router-dom'
-import { tree, tree1, tree2, tree3, tree4 } from './Tree'
+import { tree1, tree2, tree3, tree4 } from './Tree'
 import avatarPersonnel from './assets/avatar-personnel.svg'
+import tree from './sample.json'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -17,7 +18,7 @@ export default class App extends React.Component {
     }
   }
 
-  getChild = id => {
+  getChild = (id) => {
     switch (id) {
       case 100:
         return tree1
@@ -32,7 +33,7 @@ export default class App extends React.Component {
     }
   }
 
-  getParent = d => {
+  getParent = (d) => {
     if (d.id === 100) {
       return {
         id: 500,
@@ -72,7 +73,7 @@ export default class App extends React.Component {
     this.setState({ downloadingChart: false })
   }
 
-  handleOnChangeConfig = config => {
+  handleOnChangeConfig = (config) => {
     this.setState({ config: config })
   }
 
@@ -125,26 +126,27 @@ export default class App extends React.Component {
               tree={tree}
               downloadImageId={downloadImageId}
               downloadPdfId={downloadPdfId}
-              onConfigChange={config => {
+              nodeWidth={175}
+              onConfigChange={(config) => {
                 this.handleOnChangeConfig(config)
               }}
-              loadConfig={d => {
+              loadConfig={(d) => {
                 let configuration = this.handleLoadConfig(d)
                 if (configuration) {
                   return configuration
                 }
               }}
-              downlowdedOrgChart={d => {
+              downlowdedOrgChart={(d) => {
                 this.handleDownload()
               }}
-              loadImage={d => {
+              loadImage={(d) => {
                 return Promise.resolve(avatarPersonnel)
               }}
-              loadParent={d => {
+              loadParent={(d) => {
                 const parentData = this.getParent(d)
                 return parentData
               }}
-              loadChildren={d => {
+              loadChildren={(d) => {
                 const childrenData = this.getChild(d.id)
                 return childrenData
               }}

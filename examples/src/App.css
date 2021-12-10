@@ -20,6 +20,11 @@ body {
 .org-chart-person-name {
   font-weight: 500;
 }
+
+.org-chart-generic-header {
+  font-weight: 700;
+}
+
 .org-chart-person-link:hover g {
   fill: #409cf9 !important;
 }

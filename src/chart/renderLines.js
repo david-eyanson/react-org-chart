@@ -20,20 +20,20 @@ function renderLines(config = {}) {
 
   // Select all the links to render the lines
   const link = svg.selectAll('path.link').data(
-    links.filter(link => link.source.id),
-    d => d.target.id
+    links.filter((link) => link.source.id),
+    (d) => d.target.id
   )
-
+  console.log('node height lines', nodeHeight)
   // Define the curved line function
   const curve = d3.svg
     .diagonal()
-    .projection(d => [d.x + nodeWidth / 2, d.y + nodeHeight / 2])
+    .projection((d) => [d.x + nodeWidth / 2, d.y + nodeHeight / 2])
 
   // Define the angled line function
   const angle = d3.svg
     .line()
-    .x(d => d.x)
-    .y(d => d.y)
+    .x((d) => d.x)
+    .y((d) => d.y)
     .interpolate('linear')
 
   if (lineType === 'angle') {
@@ -46,7 +46,7 @@ function renderLines(config = {}) {
       .attr('stroke', '#A9A9A9')
       .attr('stroke-opacity', 1)
       .attr('stroke-width', 1.25)
-      .attr('d', d => {
+      .attr('d', (d) => {
         const linePoints = [
           {
             x: d.source.x0 + parseInt(nodeWidth / 2),
@@ -73,7 +73,7 @@ function renderLines(config = {}) {
     link
       .transition()
       .duration(animationDuration)
-      .attr('d', d => {
+      .attr('d', (d) => {
         const linePoints = [
           {
             x: d.source.x + parseInt(nodeWidth / 2),
@@ -101,7 +101,7 @@ function renderLines(config = {}) {
       .exit()
       .transition()
       .duration(animationDuration)
-      .attr('d', d => {
+      .attr('d', (d) => {
         const lineNode = config.callerNode ? config.callerNode : parentNode
         const linePoints = [
           {
@@ -136,7 +136,7 @@ function renderLines(config = {}) {
       .attr('fill', 'none')
       .attr('x', nodeWidth / 2)
       .attr('y', nodeHeight / 2)
-      .attr('d', d => {
+      .attr('d', (d) => {
         const source = {
           x: parentNode.x0,
           y: parentNode.y0,
@@ -149,17 +149,14 @@ function renderLines(config = {}) {
       })
 
     // Transition links to their new position.
-    link
-      .transition()
-      .duration(animationDuration)
-      .attr('d', curve)
+    link.transition().duration(animationDuration).attr('d', curve)
 
     // Transition exiting nodes to the parent's new position.
     link
       .exit()
       .transition()
       .duration(animationDuration)
-      .attr('d', function(d) {
+      .attr('d', function (d) {
         const source = {
           x: parentNode.x,
           y: parentNode.y,
